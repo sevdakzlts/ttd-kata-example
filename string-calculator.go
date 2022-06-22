@@ -5,12 +5,12 @@ import (
 	"strings"
 )
 
-func Add(numbers string) int {
-	splitString := strings.Split(numbers, ",")
+func Add(input string) int {
+	inputChars := strings.Split(input, ",")
 	var sum int
-	for _, i := range splitString {
-		num, _ := strconv.Atoi(i)
-		sum += num
+	for _, i := range inputChars {
+		number, _ := strconv.Atoi(i)
+		sum += number
 	}
 	return sum
 }
