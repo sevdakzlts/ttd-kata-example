@@ -20,7 +20,7 @@ func TestAdder(t *testing.T) {
 			t.Fatal("didn't get an error but wanted one")
 		}
 
-		if got != want {
+		if got.Error() != want.Error() {
 			t.Errorf("got %q, want %q", got, want)
 		}
 	}
