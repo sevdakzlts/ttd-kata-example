@@ -27,4 +27,11 @@ func TestAdder(t *testing.T) {
 		checkSums(t, got, want)
 	})
 
+	t.Run("make the sums of new lines between numbers", func(t *testing.T) {
+		got := Add("1\n2,3")
+		want := 6
+
+		checkSums(t, got, want)
+	})
+
 }
