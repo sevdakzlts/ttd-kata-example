@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func Add(input string) int {
+func Add(input string) (int, error) {
 	inputWithoutNewLine := strings.Replace(input, "\n", ",", -1)
 	inputChars := strings.Split(inputWithoutNewLine, ",")
 	var sum int
@@ -13,5 +13,5 @@ func Add(input string) int {
 		number, _ := strconv.Atoi(i)
 		sum += number
 	}
-	return sum
+	return sum, nil
 }
