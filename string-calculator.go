@@ -6,7 +6,8 @@ import (
 )
 
 func Add(input string) int {
-	inputChars := strings.Split(input, ",")
+	inputWithoutNewLine := strings.Replace(input, "\n", ",", -1)
+	inputChars := strings.Split(inputWithoutNewLine, ",")
 	var sum int
 	for _, i := range inputChars {
 		number, _ := strconv.Atoi(i)
