@@ -59,5 +59,11 @@ func TestAdder(t *testing.T) {
 
 		checkSums(t, got, want)
 	})
+	t.Run("negative number will throw an exception", func(t *testing.T) {
+		_, err := Add("-2")
+		want := errors.New("negatives not allowed")
+
+		checkErrors(t, err, want)
+	})
 
 }
