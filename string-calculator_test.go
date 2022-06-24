@@ -53,4 +53,11 @@ func TestAdder(t *testing.T) {
 		checkErrors(t, err, want)
 	})
 
+	t.Run("make the sums of different delimiters", func(t *testing.T) {
+		got, _ := Add("//;\n1;2")
+		want := 3
+
+		checkSums(t, got, want)
+	})
+
 }
