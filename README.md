@@ -1,4 +1,4 @@
-# ttd-kata-example-String Calculator
+# ttd-kata-example-string-calculator
 
 The following is a TDD Kata- an exercise in coding, refactoring and test-first.
 [You can download a more readable version of the Kata here.](https://osherove.com/s/String-Calculator-Kata-v1.pdf)
